@@ -18,10 +18,22 @@ function DetailPortfolio() {
     <Navbar />
     <section id='detail-portfolio'>
         <div className="wrapper">
-            <h1>{data.title}</h1>
-            <img src={data.detailImage} alt={data.title || 'portfolio'} />
-            <p className="skill"><b>skills:</b> {data.skill}</p>
-        </div>
+  <h1>{data.title}</h1>
+  <img src={data.detailImage} alt={data.title || 'portfolio'} />
+
+  {/* ---- BAGIAN YANG DIUBAH ---- */}
+  {/* Tampilkan blok ini HANYA JIKA data.id sama dengan '2' */}
+  {data.id === '2' && (
+    <>
+      <img src={data.detailImage2} alt={data.title || 'portfolio'} />
+      <img src={data.detailImage3} alt={data.title || 'portfolio'} />
+    </>
+  )}
+  {/* ---- AKHIR BAGIAN YANG DIUBAH ---- */}
+
+  <p className="skill"><b>skills:</b> {data.skill}</p>
+  <p className="desc"><b>Description:</b> {data.desc}</p>
+</div>
     </section>
 
     <Footer />
