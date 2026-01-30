@@ -1,5 +1,5 @@
 import portfolio1 from '../assets/portfolio1.png'
-import portfolio2 from '../assets/image.png' /* Import ini dibiarkan jika file image.png memang ada, jika tidak ada, hapus baris ini */
+// import portfolio2 from '../assets/image.png' /* Import ini dibiarkan jika file image.png memang ada, jika tidak ada, hapus baris ini */
 import figmaPort1 from '../assets/figmaPort(2).png'
 import figmaPort3 from '../assets/figmaPort(3).png'
 import portfolio3 from '../assets/android.png'
