@@ -190,7 +190,7 @@ function DetailPortfolio() {
             <div className="description-box">
               <h3>Description</h3>
               {/* Memanggil data.desc (sesuai yang diupdate di dataPortfolio.jsx) */}
-              <p>{data.desc || "No description provided."}</p>
+              <p>{data.Description || "No description provided."}</p>
             </div>
           </motion.div>
 
