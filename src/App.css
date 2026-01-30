@@ -1,51 +1,113 @@
-/* Global */
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+/* src/App.css */
 
+/* --- 1. FONTS IMPORT --- */
+/* Kita gabungkan font Kanit (untuk Judul) dan Inter (untuk text modern) */
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&family=Inter:wght@300;400;600&family=Nunito+Sans:opsz,wght@6..12,300&display=swap");
+
+/* --- 2. VARIABLES (THEME CONFIG) --- */
+:root {
+  /* Palet Warna Modern (Dark & Sleek) */
+  --bg-primary: #0f172a;       /* Background Utama (Gelap) */
+  --bg-secondary: #1e293b;     /* Background Card/Navbar */
+  --text-primary: #f1f5f9;     /* Teks Utama (Putih Terang) */
+  --text-secondary: #94a3b8;   /* Teks Sekunder (Abu-abu) */
+  
+  /* Accent Color (Ganti ini jika ingin warna selain biru) */
+  --accent-color: #38bdf8;     /* Biru Neon */
+  --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+  
+  /* Glassmorphism Effect */
+  --glass-bg: rgba(30, 41, 59, 0.7);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- 3. GLOBAL RESET & BODY --- */
 html,
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-size: 16px;
-  font-family: "Nunito Sans", sans-serif;
+  /* Menggunakan Inter untuk body text agar lebih bersih & modern */
+  font-family: 'Inter', 'Nunito Sans', sans-serif; 
   scroll-behavior: smooth;
-  background-color: #dedede;
+  background-color: var(--bg-primary); /* Update ke Dark Mode */
+  color: var(--text-primary);          /* Update warna teks */
+  overflow-x: hidden;                  /* Mencegah scroll samping di HP */
 }
+
+/* --- 4. LAYOUT WRAPPER (Updated for Responsiveness) --- */
 .wrapper {
-  width: 1024px;
+  /* Menggunakan max-width agar tidak kaku di 1024px */
+  max-width: 1024px;
+  width: 90%; /* Di HP akan mengambil 90% layar, di PC max 1024px */
   margin: auto;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0px;
+  position: relative; /* Penting untuk positioning elemen anak */
 }
 
 section {
-  padding: 50px 0px 50px 0px;
+  padding: 50px 0px;
 }
 
+/* --- 5. TYPOGRAPHY (HEADINGS) --- */
+/* Mempertahankan gaya garis bawah lama, tapi dengan warna baru */
 .wrapper > h3,
 .wrapper > h1 {
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 2.5rem; /* Sedikit disesuaikan agar pas di HP */
   margin: 0px 0px 30px 0px;
-  padding: 0px;
-  font-family: "Kanit", sans-serif;
-  color: #222831;
-  letter-spacing: 5px;
+  padding-bottom: 10px;
+  
+  font-family: "Kanit", sans-serif; /* Font judul tetap Kanit */
+  color: var(--text-primary);       /* Ganti warna hitam lama ke putih */
+  letter-spacing: 3px;
   text-transform: uppercase;
-  border-bottom: 5px solid #cccccc;
+  
+  /* Garis bawah utama (abu-abu tipis) */
+  border-bottom: 3px solid var(--bg-secondary);
 }
+
+/* Garis bawah aksen (warna biru/neon) */
 .wrapper > h3::after,
 .wrapper > h1::after {
   content: "";
   display: block;
-  border-bottom: 5px solid #aa392d;
-  width: 25%;
+  border-bottom: 5px solid var(--accent-color); /* Ganti merah lama ke aksen baru */
+  width: 20%; /* Lebar garis aksen */
   position: relative;
-  bottom: -5px; /* your padding + border-width */
+  bottom: -13px; /* Disesuaikan posisinya */
   margin: auto;
+  border-radius: 5px; /* Membuat ujung garis sedikit membulat */
 }
 
-@media only screen and (max-width: 1000px) {
+/* --- 6. CUSTOM SCROLLBAR --- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+/* --- 7. RESPONSIVE MEDIA QUERIES --- */
+@media only screen and (max-width: 768px) {
   .wrapper {
-    width: 80%;
+    width: 90%; /* Memastikan margin kiri-kanan aman di HP */
+  }
+  
+  .wrapper > h3,
+  .wrapper > h1 {
+    font-size: 1.8rem; /* Mengecilkan judul di HP agar tidak pecah */
+  }
+  
+  .wrapper > h3::after,
+  .wrapper > h1::after {
+    width: 40%; /* Memanjangkan garis aksen di HP agar seimbang */
   }
 }

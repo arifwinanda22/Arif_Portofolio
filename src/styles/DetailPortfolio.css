@@ -1,13 +1,160 @@
-#detail-portfolio > .wrapper {
-  width: 60%;
+/* src/styles/DetailPortfolio.css */
+
+/* --- Container Utama --- */
+.detail-portfolio-container {
+  min-height: 100vh;
+  padding-bottom: 50px;
 }
-#detail-portfolio > .wrapper > img {
-  margin: auto;
+
+#detail-portfolio {
+  padding-top: 50px;
   width: 100%;
-  border-radius: 10px;
 }
-#detail-portfolio > .wrapper > p.skill {
+
+#detail-portfolio > .wrapper {
+  max-width: 1000px; 
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* --- Typography --- */
+#detail-portfolio h1 {
   text-align: center;
-  font-size: 1.5rem;
-  color: #222831;
+  font-family: 'Kanit', sans-serif;
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* --- PROJECT GALLERY (GRID SYSTEM) --- */
+.project-gallery {
+  display: grid;
+  /* Auto-fit: Jika ada 1 gambar -> full/center. Jika 2 -> side-by-side. */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px; /* Jarak antar gambar */
+  justify-content: center;
+  align-items: center; /* Agar gambar vertikal & horizontal rata tengah */
+}
+
+/* Wadah per-gambar */
+.gallery-item {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Style Gambar */
+.gallery-item img {
+  width: 100%;
+  max-width: 500px; /* Batasi lebar agar "sedang" */
+  max-height: 500px; /* Batasi tinggi agar gambar HP tidak raksasa */
+  object-fit: contain; 
+  
+  border-radius: 15px;
+  border: 2px solid var(--bg-secondary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  background-color: rgba(255,255,255,0.02); 
+}
+
+/* Efek Hover Gambar */
+.gallery-item img:hover {
+  transform: scale(1.02);
+  border-color: var(--accent-color);
+}
+
+/* --- DEMO BUTTON STYLING --- */
+.demo-link-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px; 
+  margin-bottom: 20px;
+}
+
+.btn-demo {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--accent-color); /* Warna Biru Neon */
+  color: var(--bg-primary); /* Teks Hitam/Gelap biar kontras */
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.btn-demo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.7);
+  background-color: #fff; /* Jadi putih pas hover */
+  color: var(--accent-color);
+}
+
+/* --- Info & Skills --- */
+.portfolio-info {
+  margin-top: 20px;
+  background-color: var(--bg-secondary);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+}
+
+.skill-badge .label {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.skill-badge .value {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.description-box h3 {
+  color: var(--accent-color);
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.description-box p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* --- Responsive HP --- */
+@media only screen and (max-width: 768px) {
+  #detail-portfolio h1 {
+    font-size: 2rem;
+  }
+  
+  .project-gallery {
+    grid-template-columns: 1fr; /* Di HP kembali jadi 1 kolom tumpuk */
+  }
+  
+  .gallery-item img {
+    max-height: none; /* Di HP biarkan tinggi menyesuaikan lebar */
+  }
 }

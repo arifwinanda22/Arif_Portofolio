@@ -1,80 +1,207 @@
+/* src/styles/Header.css */
+
+/* --- 1. Container Utama Header (Background) --- */
 header {
-  background-color: #39404a;
-  height: 100vh;
-  background-position: center center;
   position: relative;
-  font-family: "Kanit", sans-serif;
-  letter-spacing: 5px;
-  text-shadow: 0 0 4px #000;
+  width: 100%;
+  min-height: 100vh; /* Full layar */
+  display: flex;
+  align-items: center; /* Vertikal Center */
+  justify-content: center;
+  
+  background-image: url('../assets/background.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Fallback jika gambar tidak ada (Gradient Gelap Modern) */
+  background-color: var(--bg-primary); 
+  
+  padding: 0 20px;
+  overflow: hidden; /* Mencegah scrollbar horizontal jika animasi keluar layar */
 }
 
-.header-jumbotron {
+/* Overlay Hitam Transparan (Agar teks terbaca jelas di atas gambar) */
+.header-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
   width: 100%;
   height: 100%;
-  justify-content: center;
+  /* Gradient overlay: Gelap di kiri, agak terang di kanan */
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.7) 100%);
+  z-index: 1;
+}
+
+/* --- 2. Jumbotron (Flex Container) --- */
+.header-jumbotron {
+  position: relative;
+  z-index: 2; /* Di atas overlay */
+  display: flex;
+  flex-direction: row; /* Kiri - Kanan */
   align-items: center;
-  flex-direction: column;
-  text-align: center;
+  justify-content: space-between; /* Jarak maksimal antara teks dan gambar */
+  width: 100%;
+  max-width: 1100px; /* Lebar konten maksimal */
+  gap: 50px;
 }
 
-.header-jumbotron > img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
+/* --- 3. Bagian Kiri (Teks) --- */
+.header-content {
+  flex: 1; /* Mengambil ruang sisa */
+  text-align: left; /* Rata Kiri */
 }
 
-.header-jumbotron > h3 {
-  color: #fff;
-  margin: 30px 0px 0px 0px;
-  padding: 5px;
+.header-content h3 {
+  font-family: 'Inter', sans-serif;
   font-size: 3.5rem;
-  line-height: 4rem;
-  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 15px 0;
+  line-height: 1.2;
+  border-bottom: none !important; /* Hapus garis bawah global */
+}
+/* Hapus garis after global */
+.header-content h3::after {
+  display: none !important;
 }
 
-.header-jumbotron > p {
-  padding: 5px;
-  margin: 0px 5px 20px 5px;
-  color: #fff;
-  font-size: 1.2rem;
+.header-content p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  font-weight: 400;
+  max-width: 500px; /* Batasi lebar teks agar rapi */
 }
+
+/* --- 4. Bagian Kanan (Gambar) --- */
+.header-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Gambar rapat kanan */
+}
+
+.header-image img {
+  width: 350px; /* Ukuran gambar besar */
+  height: 350px;
+  object-fit: cover;
+  border-radius: 30px; /* Sudut membulat modern (squircle) */
+  
+  /* Efek Glass/Border pada Foto */
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.5), 
+              -5px -5px 20px rgba(255, 255, 255, 0.05);
+              
+  transition: transform 0.3s ease;
+}
+
+.header-image img:hover {
+  transform: scale(1.02); /* Sedikit membesar saat hover */
+  border-color: var(--accent-color); /* Border jadi biru neon */
+}
+
+/* --- 5. Social Media --- */
 .socialMedia {
-  color: #fff;
   display: flex;
-  gap: 20px;
+  justify-content: flex-start; /* Rata kiri mengikuti teks */
+  gap: 25px;
 }
 
-.socialMedia > a {
-  background-color: #222831;
-  color: #fff;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.socialMedia > a > svg {
-  height: 30px;
-  width: auto;
-}
-.socialMedia > a:hover {
-  background-color: #aa392d;
+.socialMedia a {
+  color: var(--text-secondary);
+  font-size: 2rem;
+  transition: color 0.3s ease;
+  background: transparent;
+  width: auto; height: auto;
 }
 
-@media only screen and (max-width: 1000px) {
-  .socialMedia > a {
-    width: 60px;
-    height: 60px;
+/* --- 6. RESPONSIF (HP & Tablet) --- */
+@media only screen and (max-width: 900px) {
+  .header-jumbotron {
+    flex-direction: column-reverse; /* Gambar di atas, Teks di bawah (atau sebaliknya) */
+    text-align: center;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 80px; /* Ruang untuk navbar */
   }
 
-  .socialMedia > a > svg {
-    height: 30px;
-    width: auto;
+  .header-content {
+    text-align: center; /* Di HP teks jadi tengah */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header-content h3 {
+    font-size: 2.5rem;
+  }
+  
+  .header-image {
+    justify-content: center;
+  }
+
+  .header-image img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .socialMedia {
+    justify-content: center; /* Sosmed tengah di HP */
+  }
+}
+
+.rotating-text-wrapper {
+  display: flex;
+  align-items: center; /* Rata tengah vertikal */
+  flex-wrap: wrap; /* Agar aman di layar kecil */
+  font-family: 'Inter', sans-serif;
+  font-size: 1.8rem; /* Sedikit diperbesar agar jelas */
+  margin-bottom: 20px;
+  gap: 8px; /* Jarak antara "I am a" dan Role */
+  min-height: 50px; /* Mencegah layout naik-turun saat teks ganti */
+}
+
+.static-text {
+  color: var(--text-secondary);
+  font-weight: 400;
+  white-space: nowrap; /* "I am a" tidak boleh turun baris */
+}
+
+/* Area teks dinamis */
+.dynamic-text-area {
+  display: inline-flex;
+  min-width: 300px; /* Memberi ruang agar teks panjang tidak menggeser layout */
+  justify-content: flex-start;
+}
+
+.dynamic-text {
+  color: var(--accent-color); /* Warna Biru Neon */
+  font-weight: 700;
+  /* HAPUS position: absolute yang bikin tumpuk */
+}
+
+/* Deskripsi */
+.description-text {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* --- RESPONSIF HP --- */
+@media only screen and (max-width: 900px) {
+  .rotating-text-wrapper {
+    justify-content: center; /* Tengah di HP */
+    font-size: 1.3rem;
+  }
+  
+  .dynamic-text-area {
+    min-width: auto; /* Reset lebar minimum di HP */
+    width: 100%;
+    justify-content: center; /* Tengah di HP */
+  }
+
+  .header-content h3 {
+    font-size: 2.5rem; /* Sesuaikan ukuran nama */
   }
 }

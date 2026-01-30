@@ -16,7 +16,7 @@ function Navbar() {
     <nav>
       <div className="wrapper">
         <div className="logo">
-          <Link to="/">Arif Winanda</Link>
+          <Link to="/">Rif's Media</Link>
         </div>
 
         <div className={`menu ${menuTampil ? 'tampil' : ''}`}>

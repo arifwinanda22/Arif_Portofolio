@@ -1,4 +1,5 @@
-import '../styles/portofolio.css'
+// src/components/Portofolio.jsx
+import '../styles/Portofolio.css'
 import { portfolioList } from '../data/dataPortfolio'
 import { Link } from 'react-router-dom'
 
@@ -6,7 +7,9 @@ function Portofolio() {
   return (
     <section id="portofolio">
       <div className="wrapper">
-        <h3>Portofolio</h3>
+        {/* BAGIAN INI DIUBAH */}
+        <h3>My Projects</h3>
+        
         <div className="grid">
           {
             portfolioList.map((item) => (
