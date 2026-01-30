@@ -1,5 +1,5 @@
 // src/App.jsx
-import { HashRouter, useLocation, Routes, Route } from 'react-router-dom';
+import { useLocation, Routes, Route } from 'react-router-dom'; // Hapus HashRouter
 import { AnimatePresence } from 'framer-motion';
 
 // --- Import Pages ---
@@ -10,16 +10,13 @@ import PageNotFound from './pages/PageNotFound';
 
 // --- Import Components ---
 import Navbar from './components/Navbar';
-// Perhatikan: Pastikan nama file footer.jsx di folder components sesuai (kecil/besar)
-// Jika error, cek apakah nama filenya 'footer.jsx' atau 'Footer.jsx'
 import Footer from './components/footer'; 
 import ScrollToTop from './components/ScrollToTop';
 
 import './App.css';
 
-// Komponen Khusus untuk Menangani Logika Routing & Animasi
-// Kita butuh ini dipisah agar 'useLocation' bisa berjalan di dalam HashRouter
-function AppContent() {
+function App() {
+  // useLocation BISA dipakai disini karena App sudah dibungkus BrowserRouter di main.jsx
   const location = useLocation();
 
   return (
@@ -39,15 +36,6 @@ function AppContent() {
 
       <Footer />
     </>
-  );
-}
-
-function App() {
-  return (
-    // HashRouter tetap digunakan (dari code lama) agar aman untuk GitHub Pages
-    <HashRouter>
-      <AppContent />
-    </HashRouter>
   );
 }
 
