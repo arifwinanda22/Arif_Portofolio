@@ -3,8 +3,13 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+import { BrowserRouter } from 'react-router-dom'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    {/* Tambahkan basename sesuai nama repo */}
+    <BrowserRouter basename="/Arif_Portofolio">
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
 )
