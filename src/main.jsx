@@ -1,13 +1,13 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client' // <-- Ini yang tadi hilang!
+import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* Pastikan basename sesuai nama repo GitHub Anda */}
-    <BrowserRouter basename="/Arif_Portofolio">
+    {/* HAPUS basename="/Arif_Portofolio" */}
+    <BrowserRouter> 
       <App />
     </BrowserRouter>
   </React.StrictMode>,
