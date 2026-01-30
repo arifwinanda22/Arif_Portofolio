@@ -6,8 +6,8 @@ import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* HAPUS basename="/Arif_Portofolio" */}
-    <BrowserRouter> 
+    {/* basename WAJIB SAMA dengan settingan di vite.config.js tadi */}
+    <BrowserRouter basename="/Arif_Portofolio">
       <App />
     </BrowserRouter>
   </React.StrictMode>,
