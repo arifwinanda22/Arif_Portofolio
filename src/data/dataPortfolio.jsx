@@ -87,8 +87,8 @@
 
 import portfolio1 from '../assets/portfolio1.png'
 // import portfolio2 from '../assets/image.png'
-import figmaPort1 from '../assets/figmaPort(1).png'
-import figmaPort3 from '../assets/figmaPort(3).png'
+import figmaPort1 from '../assets/figma_port_1.png'
+import figmaPort3 from '../assets/figma_port_3.png'
 import portfolio3 from '../assets/Android.png'
 import androidPortfolio from '../assets/androidPortfolio.png'
 import figmaPortfolio from '../assets/figma.png'
