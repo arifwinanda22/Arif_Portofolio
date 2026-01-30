@@ -1,5 +1,5 @@
 // src/App.jsx
-import { useLocation, Routes, Route } from 'react-router-dom'; // Hapus HashRouter
+import { HashRouter, useLocation, Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 // --- Import Pages ---
@@ -15,8 +15,8 @@ import ScrollToTop from './components/ScrollToTop';
 
 import './App.css';
 
-function App() {
-  // useLocation BISA dipakai disini karena App sudah dibungkus BrowserRouter di main.jsx
+// Komponen isi konten (Navbar s/d Footer)
+function AppContent() {
   const location = useLocation();
 
   return (
@@ -24,7 +24,6 @@ function App() {
       <Navbar />
       <ScrollToTop />
 
-      {/* AnimatePresence menangani animasi transisi antar halaman */}
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
@@ -36,6 +35,16 @@ function App() {
 
       <Footer />
     </>
+  );
+}
+
+function App() {
+  return (
+    // KITA PAKAI HASHROUTER DISINI.
+    // Karena di main.jsx sudah TIDAK ADA router, maka ini AMAN (Tidak bentrok).
+    <HashRouter>
+      <AppContent />
+    </HashRouter>
   );
 }
 
