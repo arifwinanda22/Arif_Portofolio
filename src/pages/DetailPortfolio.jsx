@@ -177,6 +177,23 @@ function DetailPortfolio() {
             </motion.div>
           )}
 
+          {data.gitLink && (
+            <motion.div 
+              className="git-link-container"
+              custom={1.5} variants={contentVariants} initial="hidden" animate="visible"
+            >
+              <a 
+                href={data.gitLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-demo"
+              >
+                <FaExternalLinkAlt style={{ marginRight: '8px' }} />
+                Visit GitHub Repository
+              </a>
+            </motion.div>
+          )}
+
           {/* INFO & SKILLS */}
           <motion.div 
             className="portfolio-info"

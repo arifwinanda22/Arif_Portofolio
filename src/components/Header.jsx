@@ -1,7 +1,7 @@
 // src/components/Header.jsx
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import profilePicture from '../assets/PP2.png'; 
+import profilePicture from '../assets/PP2.jpg'; 
 import '../styles/Header.css';
 
 // 1. UPDATE IMPORT: Tambahkan FaFilePdf
@@ -9,7 +9,7 @@ import { FaGithub, FaLinkedin, FaInstagram, FaFilePdf } from 'react-icons/fa';
 
 // 2. IMPORT FILE CV (Pastikan file ini ada di folder src/assets/)
 // import cvFile from '../assets/CV_Arif_Winanda_Lubis.pdf'; 
-import cvFile from '../assets/CV_Arif_Winanda_Lubis.pdf';
+import cvFile from '../assets/CV_ATS_Arif_Winanda_Lubis.pdf';  
 
 // Array peran/roles yang akan ditampilkan secara bergantian
 

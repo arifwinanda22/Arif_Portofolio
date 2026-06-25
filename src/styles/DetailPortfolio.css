@@ -76,6 +76,13 @@
   margin-bottom: 20px;
 }
 
+.git-link-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px; 
+  margin-bottom: 20px;
+}
+
 .btn-demo {
   display: inline-flex;
   align-items: center;

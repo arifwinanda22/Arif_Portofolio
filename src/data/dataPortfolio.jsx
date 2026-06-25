@@ -15,7 +15,7 @@ import mqttApp from '../assets/MQTTApp.png'
 import iotProject2 from '../assets/IoTProject2.png'
 import cvImage from '../assets/cv_image.png'
 import portfolioUIUX from '../assets/portfolioUIUX.png'
-import portofolioResearch from '../assets/Scientific_Research.jpg'
+import portofolioResearch from '../assets/Research_Melanoma.jpg'
 import portofolioSanditel from '../assets/Sanditel.png'
 
 export const portfolioList = [
@@ -68,12 +68,13 @@ export const portfolioList = [
         thumbnail: cvImage,
         detailImage: portofolioResearch,
         skill: 'Python, PyTorch, ReXNet-150, Grad-CAM, Academic Writing, Scientific Research, Data Analysis',
-        Description: 'Conducted rigorous research on Melanoma Skin Cancer classification utilizing the ReXNet-150 Deep Learning architecture. The study integrated Explainable AI (Grad-CAM) to enhance diagnostic transparency. This project culminated in the authorship of a scientific paper, documenting the methodology, experimental results, and contributions to efficient Computer-Aided Diagnosis (CAD) systems.'
+        Description: 'Conducted rigorous research on Melanoma Skin Cancer classification utilizing the ReXNet-150 Deep Learning architecture. The study integrated Explainable AI (Grad-CAM) to enhance diagnostic transparency. This project culminated in the authorship of a scientific paper, documenting the methodology, experimental results, and contributions to efficient Computer-Aided Diagnosis (CAD) systems.',
+        gitLink: 'https://github.com/arifwinanda22/project_MelanomaDetection',
     },
     {
         id: '7',
         title: 'Sanditel: Asset Management & Employee Reporting System', 
-        thumbnail: portfolio1, 
+        thumbnail: portfolio5,
         detailImage: portofolioSanditel, 
         skill: 'ReactJS, Laravel, PHP, MySQL/PostgreSQL, REST API, Docker, Git, GitHub',
         Description: 'Developed a comprehensive internal management system for the Telecommunications Section of the West Java Provincial Secretariat (Sanditel Sekda Jabar). This platform integrates two core modules: an Inventory Management System for tracking state assets and logistics, and a Daily Employee Reporting System (Laporan Harian) to monitor staff productivity. Key features include real-time asset tracking, automated report generation, and role-based dashboards for efficient bureaucratic administration.',
