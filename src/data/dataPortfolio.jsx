@@ -17,6 +17,7 @@ import cvImage from '../assets/cv_image.png'
 import portfolioUIUX from '../assets/portfolioUIUX.png'
 import portofolioResearch from '../assets/Research_Melanoma.jpg'
 import portofolioSanditel from '../assets/Sanditel.png'
+import sanditelProject from '../assets/sanditelProject.jpg'
 
 export const portfolioList = [
     {
@@ -74,10 +75,10 @@ export const portfolioList = [
     {
         id: '7',
         title: 'Sanditel: Asset Management & Employee Reporting System', 
-        thumbnail: portfolio5,
+        thumbnail: sanditelProject,
         detailImage: portofolioSanditel, 
         skill: 'ReactJS, Laravel, PHP, MySQL/PostgreSQL, REST API, Docker, Git, GitHub',
         Description: 'Developed a comprehensive internal management system for the Telecommunications Section of the West Java Provincial Secretariat (Sanditel Sekda Jabar). This platform integrates two core modules: an Inventory Management System for tracking state assets and logistics, and a Daily Employee Reporting System (Laporan Harian) to monitor staff productivity. Key features include real-time asset tracking, automated report generation, and role-based dashboards for efficient bureaucratic administration.',
         demoLink: 'https://fe-sanditel-blush.vercel.app/',    
-    }
+    },
 ]

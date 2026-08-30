@@ -74,7 +74,7 @@ function About() {
             {/* DESKRIPSI DIRI */}
             <motion.div className="about-text-card" variants={itemVariants}>
               <p>
-                I am an Undergraduate <strong>Information Technology Student</strong> at Telkom University with a strong background in software development. I have hands-on experience building web and mobile applications using <strong>Java, PHP (Laravel), React, and Flutter</strong>.
+                I am an fresh graduate <strong>Information Technology Student</strong> at Telkom University with a strong background in software development. I have hands-on experience building web and mobile applications using <strong>any frameworks (React, Laravel, Flutter, etc.) and also had experience building an intelligent system to make a model to improve skills with data engineer for solving at software environment and hardware environments, including the Internet of Things (IoT)</strong>.
               </p>
               <br/>
               <p>

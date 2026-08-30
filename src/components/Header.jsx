@@ -9,7 +9,7 @@ import { FaGithub, FaLinkedin, FaInstagram, FaFilePdf } from 'react-icons/fa';
 
 // 2. IMPORT FILE CV (Pastikan file ini ada di folder src/assets/)
 // import cvFile from '../assets/CV_Arif_Winanda_Lubis.pdf'; 
-import cvFile from '../assets/CV_ATS_Arif_Winanda_Lubis.pdf';  
+import cvFile from '../assets/CV_ATS_Arif Winanda Lubis (1).pdf';  
 
 // Array peran/roles yang akan ditampilkan secara bergantian
 
