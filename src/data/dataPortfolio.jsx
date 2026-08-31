@@ -18,6 +18,9 @@ import portfolioUIUX from '../assets/portfolioUIUX.png'
 import portofolioResearch from '../assets/Research_Melanoma.jpg'
 import portofolioSanditel from '../assets/Sanditel.png'
 import sanditelProject from '../assets/sanditelProject.jpg'
+import lilyCatering from '../assets/lilyCatering.jpg'
+import lilyCatering2 from '../assets/lilyCatering2.jpg'
+import b2bWebsite from '../assets/b2b-web.jpg'
 
 export const portfolioList = [
     {
@@ -81,4 +84,14 @@ export const portfolioList = [
         Description: 'Developed a comprehensive internal management system for the Telecommunications Section of the West Java Provincial Secretariat (Sanditel Sekda Jabar). This platform integrates two core modules: an Inventory Management System for tracking state assets and logistics, and a Daily Employee Reporting System (Laporan Harian) to monitor staff productivity. Key features include real-time asset tracking, automated report generation, and role-based dashboards for efficient bureaucratic administration.',
         demoLink: 'https://fe-sanditel-blush.vercel.app/',    
     },
+    {
+    id: '8',
+    title: 'My B2B Catering Website Project', 
+    thumbnail: b2bWebsite,
+    detailImage: lilyCatering,
+    detailImage2: lilyCatering2,
+    skill: 'Next.js, React.js, Tailwind CSS, Node.js, Express.js, MongoDB, REST API, Git, GitHub',
+    Description: ' B2B Catering Management Platform: Developed a full-stack B2B catering web solution designed to streamline corporate meal orders, client management, and operational workflows. Engineered a robust backend architecture using Node.js and Express.js paired with a scalable MongoDB database, while delivering a responsive, high-performance user interface with React.js and Tailwind CSS. This platform effectively optimizes bulk order processing and enhances client-vendor communication.',
+    demoLink: 'https://lily-catering-seven.vercel.app/',
+    }
 ]
