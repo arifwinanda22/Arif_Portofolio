@@ -14,7 +14,7 @@ import cvFile from '../assets/CV_ATS_Arif Winanda Lubis (1).pdf';
 // Array peran/roles yang akan ditampilkan secara bergantian
 
 const roles = [
-  "Information Technology Student at Telkom University",
+  "Information Technology Fresh Graduate from Telkom University",
   "Web Developer Enthusiast",
   "Backend Enthusiast",
   "AI Enthusiast",

@@ -1,7 +1,91 @@
 footer {
   background-color: #39404a;
   text-align: center;
-  line-height: 100px;
   color: #fff;
   letter-spacing: 5px;
+  padding: 30px 16px;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  line-height: normal;
+}
+
+.footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  letter-spacing: 1px;
+}
+
+.footer-link {
+  color: #38bdf8;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-button {
+  background: transparent;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.footer-button:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.footer-form-wrapper {
+  max-width: 480px;
+  margin: 24px auto 0;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.footer-form-wrapper input,
+.footer-form-wrapper textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #64748b;
+  background: #1e293b;
+  color: #f1f5f9;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.footer-form-wrapper input:focus,
+.footer-form-wrapper textarea:focus {
+  border-color: #38bdf8;
+}
+
+.footer-form-wrapper button[type='submit'] {
+  background: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.footer-form-wrapper button[type='submit']:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
