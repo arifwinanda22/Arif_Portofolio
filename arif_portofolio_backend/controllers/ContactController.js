@@ -44,7 +44,7 @@ async function createMessage(req, res) {
       },
     });
   } catch (error) {
-    // Error validasi dari Mongoose (misal format email salah)
+
     if (error.name === 'ValidationError') {
       const firstError = Object.values(error.errors)[0]?.message;
       return res.status(400).json({
@@ -61,8 +61,7 @@ async function createMessage(req, res) {
   }
 }
 
-// (Opsional) Endpoint untuk melihat daftar pesan masuk — hanya untuk Anda sendiri,
-// sebaiknya dilindungi dengan autentikasi (lihat catatan di README).
+
 async function getAllMessages(req, res) {
   try {
     const messages = await Message.find().sort({ createdAt: -1 });
