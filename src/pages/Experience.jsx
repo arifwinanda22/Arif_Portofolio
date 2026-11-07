@@ -31,17 +31,17 @@ import sreLogo from '../assets/sre-logo.png';
 // ==============================================================
 const CATEGORY_CONFIG = {
   work: {
-    label: 'Pekerjaan',
+    label: 'Work',
     color: '#38bdf8',
     bgSoft: 'rgba(56, 189, 248, 0.12)',
   },
   organization: {
-    label: 'Organisasi',
+    label: 'Organization',
     color: '#a78bfa',
     bgSoft: 'rgba(167, 139, 250, 0.12)',
   },
   certification: {
-    label: 'Sertifikasi & Pelatihan',
+    label: 'Certification & Training',
     color: '#34d399',
     bgSoft: 'rgba(52, 211, 153, 0.12)',
   },
@@ -312,7 +312,7 @@ function ExperienceStatsBar({ stats }) {
               <span style={{ color: '#e2e8f0', fontWeight: 600 }}>
                 {config.label}{' '}
                 <span style={{ color: '#64748b', fontWeight: 400 }}>
-                  ({stat.itemCount} pengalaman)
+                  ({stat.itemCount} experience)
                 </span>
               </span>
               <span style={{ color: config.color, fontWeight: 700 }}>{stat.percentage}%</span>
@@ -349,7 +349,7 @@ function ExperienceStatsBar({ stats }) {
 // ==============================================================
 function CategoryFilterTabs({ active, onChange }) {
   const tabs = [
-    { value: 'all', label: 'Semua', color: '#f1f5f9' },
+    { value: 'all', label: 'All', color: '#f1f5f9' },
     { value: 'work', label: CATEGORY_CONFIG.work.label, color: CATEGORY_CONFIG.work.color },
     {
       value: 'organization',

@@ -21,6 +21,7 @@ import sanditelProject from '../assets/sanditelProject.jpg'
 import lilyCatering from '../assets/lilyCatering.jpg'
 import lilyCatering2 from '../assets/lilyCatering2.jpg'
 import b2bWebsite from '../assets/b2b-web.jpg'
+import smartcompWeb from '../assets/SmartComp_img.png'
 
 export const portfolioList = [
     {
@@ -51,11 +52,12 @@ export const portfolioList = [
     },
      {
         id:'4',
-        title: 'My Java Web Application Project',
+        title: 'My Java SmartComp Application Project',
         thumbnail:portfolio4,
-        detailImage:portfolio4,
-        skill:'Java, Apache Tomcat, Object Oriented Programming (OOP), Java EE (Jakarta EE), Spring Framework, SQL, JDBC, Java Persistence API (JPA)',
-        Description: ' '
+        detailImage:smartcompWeb,
+        skill:'Java, Apache Tomcat, Object Oriented Programming (OOP), Java EE (Jakarta EE), Spring Framework, Postgre SQL, JDBC, Java Persistence API (JPA)',
+        Description: ' SmartComp is a centralized competition and workshop management platform built with enterprise-grade Java standards. Developed using the Spring Framework, Jakarta EE, and Apache Tomcat, the application leverages robust Object-Oriented Programming (OOP) principles and JPA/JDBC for seamless, reliable data persistence with PostgreSQL. It streamlines event discovery, registration workflows, and participant data management through clean, scalable backend architecture. ',
+        gitLink: 'https://github.com/arifwinanda22/Smartcomp_Project',
     },
      {
         id:'5',
